@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import Login from './components/login.component';
@@ -26,12 +25,19 @@ function App() {
     setUserToken(token);
   };
 
+  const handleLogout = () => {
+    // Perform any additional logout logic (clearing tokens, etc.)
+    setIsAuthenticated(false);
+    setUserEmail(null);
+    setUserToken(null);
+  };
+
   return (
     <Router>
       <div className={`App${!isAuthenticated ? ' initial-page' : ''}`}>
         {isAuthenticated ? (
           <>
-            <Sidebar />
+            <Sidebar handleLogout={handleLogout} />
             <Routes>
               <Route path="/team-lead-page" element={<TeamLeadPage />} />
               <Route path="/project" element={<ProjectsPage />} />

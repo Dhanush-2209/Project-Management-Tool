@@ -39,7 +39,15 @@ export default class Login extends Component {
           if (typeof this.props.onLogin === 'function') {
             this.props.onLogin();
           }
+        } else {
+          // Display an alert or update the UI to inform the user about the incorrect password
+          alert("Incorrect password. Please try again.");
         }
+      })
+      .catch((error) => {
+        // Handle any network or server errors
+        console.error("Login failed:", error);
+        alert("Login failed. Please try again later.");
       });
   }
 
