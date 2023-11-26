@@ -1,4 +1,3 @@
-// TeamLeadPage.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TeamLeadPage.css';
@@ -33,7 +32,6 @@ const TeamLeadPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare the data to be sent to the server
     const formData = {
       teamCode,
       teamName,
@@ -42,8 +40,7 @@ const TeamLeadPage = () => {
     };
 
     try {
-      // Make a POST request to your Express server
-      const response = await fetch('http://localhost:3001/api/teamLead/submit', {
+      const response = await fetch('https://deploy-backend-teamdetails.onrender.com/api/teamLead/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,14 +48,11 @@ const TeamLeadPage = () => {
         body: JSON.stringify(formData),
       });
 
-      // Check if the request was successful (status code 2xx)
       if (response.ok) {
         const responseData = await response.json();
-        console.log(responseData); // Log the response from the server
-        // Redirect to a success page or handle success as needed
+        console.log(responseData);
         navigate('/success-page');
       } else {
-        // Handle errors
         console.error('Error submitting form:', response.statusText);
       }
     } catch (error) {
@@ -98,7 +92,6 @@ const TeamLeadPage = () => {
           />
         </label>
 
-        {/* Render member input fields dynamically */}
         {members.map((member, index) => (
           <div key={index} className="member-details">
             <label className="team-lead-label">
@@ -138,7 +131,6 @@ const TeamLeadPage = () => {
           </div>
         ))}
 
-        {/* Add member input fields and logic to handle member details */}
         <button type="button" onClick={handleAddMember} className="team-lead-button">
           Add Member
         </button>

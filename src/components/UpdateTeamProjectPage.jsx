@@ -1,4 +1,3 @@
-// UpdateTeamProjectPage.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import './UpdateTeamProjectPage.css';
@@ -40,7 +39,7 @@ const UpdateTeamProjectPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`http://localhost:3001/api/teamLead/update/team/${projectDetails.projectName}`, projectDetails);
+      const response = await axios.put(`https://deploy-backend-teamdetails.onrender.com/api/teamLead/update/team/${projectDetails.projectName}`, projectDetails);
       console.log('Team project updated successfully:', response.data);
     } catch (error) {
       console.error('Error updating team project:', error);

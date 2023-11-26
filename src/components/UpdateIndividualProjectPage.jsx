@@ -1,4 +1,3 @@
-// UpdateIndividualProjectPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -15,7 +14,7 @@ const UpdateIndividualProjectPage = () => {
   useEffect(() => {
     const fetchProjectDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3002/api/individual/projects/${projectName}`);
+        const response = await axios.get(`https://deploy-backend-indetails.onrender.com/api/individual/projects/${projectName}`);
         console.log('Response Data:', response.data); // Add this line
         if (response.data && response.data.data) {
           setProjectDetails(response.data.data);
@@ -34,7 +33,7 @@ const UpdateIndividualProjectPage = () => {
   const handleUpdate = async () => {
     console.log('Updating project with ID:', projectDetails._id);
     try {
-      const response = await axios.put(`http://localhost:3002/api/individual/projects/${projectDetails._id}`, projectDetails);
+      const response = await axios.put(`https://deploy-backend-indetails.onrender.com/api/individual/projects/${projectDetails._id}`, projectDetails);
       console.log('Project updated successfully:', response.data);
     } catch (error) {
       console.error('Error updating individual project:', error);

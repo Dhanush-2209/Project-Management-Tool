@@ -2,18 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './ProjectPage.css';
 
 const ProjectsPage = () => {
-
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [statusFilter, setStatusFilter] = useState('Project Schedule');
 
   useEffect(() => {
-    // Fetch filtered projects when the status filter changes
     fetchFilteredProjects();
   }, [statusFilter]);
 
   const fetchFilteredProjects = async () => {
     try {
-      const response = await fetch(`http://localhost:3002/api/individual/projects/${statusFilter}`);
+      const response = await fetch(`https://deploy-backend-indetails.onrender.com/api/individual/projects/${statusFilter}`);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ${statusFilter} projects`);
@@ -44,7 +42,7 @@ const ProjectsPage = () => {
 
       <ul className="project-list">
         {filteredProjects.map((project) => {
-          console.log('Project:', project); // Log the project for debugging
+          console.log('Project:', project);
           return (
             <li key={project._id}>
               {`Project Name: ${project.projectName}`}

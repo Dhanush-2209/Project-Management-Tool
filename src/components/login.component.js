@@ -1,5 +1,5 @@
-// login.component.js
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './login.component.css';
 
 export default class Login extends Component {
@@ -16,13 +16,11 @@ export default class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
 
-    fetch("http://localhost:5000/login-user", {
+    fetch("https://deploy-backend-login.onrender.com/login-user", {
       method: "POST",
-      crossDomain: true,
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
         email,
@@ -81,7 +79,7 @@ export default class Login extends Component {
               </button>
             </div>
             <p className="forgot-password text-right">
-              Forgot <a href="#">password?</a>
+              Forgot <Link to="/forgot-password">password?</Link>
             </p>
           </form>
         </div>

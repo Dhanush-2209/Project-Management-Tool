@@ -26,7 +26,7 @@ const IndividualPage = () => {
         endDate: new Date(projectData.endDate).toISOString(),
       };
 
-      const response = await fetch('http://localhost:3002/api/individual/submit', {
+      const response = await fetch('https://deploy-backend-indetails.onrender.com/api/individual/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,6 @@ const IndividualPage = () => {
       const result = await response.json();
       console.log('Saved Project:', result.data);
 
-      // Reset the form and hide project options
       setProjectData({
         projectName: '',
         startDate: new Date().toISOString().split('T')[0],

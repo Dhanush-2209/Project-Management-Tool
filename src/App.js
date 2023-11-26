@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 import UpdateTeamProjectPage from './components/UpdateTeamProjectPage';
 import UpdateIndividualProjectPage from './components/UpdateIndividualProjectPage';
+import ForgotPassword from './components/ForgotPassword'; // Import the new component
 import './App.css';
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
                     element={<Login onLogin={handleLogin} />}
                   />
                   <Route path="/sign-up" element={<SignUp />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
                 </Routes>
               </div>
             </div>

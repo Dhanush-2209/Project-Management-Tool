@@ -11,12 +11,12 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTeamProjectNames = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/teamLead/projects');
+        const response = await axios.get('https://deploy-backend-teamdetails.onrender.com/api/teamLead/projects');
         if (Array.isArray(response.data)) {
           setTeamProjectNames(response.data);
         } else {
           console.error('Unexpected data format for team projects:', response.data);
-          setTeamProjectNames([]); // Set to an empty array or handle as needed
+          setTeamProjectNames([]);
         }
       } catch (error) {
         console.error('Error fetching team project names:', error);
@@ -27,12 +27,12 @@ const Dashboard = () => {
 
     const fetchIndividualProjectNames = async () => {
       try {
-        const response = await axios.get('http://localhost:3002/api/individual/projects');
+        const response = await axios.get('https://deploy-backend-indetails.onrender.com/api/individual/projects');
         if (response.data && response.data.data) {
           setIndividualProjectNames(response.data.data);
         } else {
           console.error('Unexpected data format for individual projects:', response.data);
-          setIndividualProjectNames([]); // Set to an empty array or handle as needed
+          setIndividualProjectNames([]);
         }
       } catch (error) {
         console.error('Error fetching individual project names:', error);
@@ -48,15 +48,12 @@ const Dashboard = () => {
   const handleDelete = async (projectName, isTeam) => {
     try {
       const apiUrl = isTeam
-  ? `http://localhost:3001/api/teamLead/projects/delete/${projectName}`
-  : `http://localhost:3002/api/individual/delete/individual/${projectName}`;
-
-
+        ? `https://deploy-backend-teamdetails.onrender.com/api/teamLead/projects/delete/${projectName}`
+        : `https://deploy-backend-indetails.onrender.com/api/individual/delete/individual/${projectName}`;
 
       const response = await axios.delete(apiUrl);
 
       if (response.data.success) {
-        // Remove the deleted project from the state
         if (isTeam) {
           setTeamProjectNames((prevProjects) => prevProjects.filter((project) => project !== projectName));
         } else {

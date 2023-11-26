@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './signup.component.css'; // Import the CSS file
+import './signup.component.css';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { fname, lname, email, password } = this.state;
 
-    fetch("http://localhost:5000/register", {
+    fetch("https://deploy-backend-login.onrender.com/register", { // Updated URL
       method: "POST",
       crossDomain: true,
       headers: {
