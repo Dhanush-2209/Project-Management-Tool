@@ -1,0 +1,33 @@
+.individual-page-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    .individual-page-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    .individual-page-button {
+    background-color: #4c68af;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    }
+    .project-options {
+    margin-top: 20px;
+    }
+    .project-options label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    .project-options input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    }

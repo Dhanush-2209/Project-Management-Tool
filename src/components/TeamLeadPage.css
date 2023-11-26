@@ -1,0 +1,48 @@
+.team-lead-container {
+  max-width: 400px; /* Adjust the maximum width based on your design */
+  margin: 0 auto;
+  padding: 20px;
+  }
+  .team-lead-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  .team-lead-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  }
+  .team-lead-label {
+  text-align: right;
+  margin-bottom: 10px;
+  }
+  .team-lead-input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  }
+  /* Styles for the member details container */
+  .member-details {
+  display: flex;
+  flex-direction: column; /* Display member details one below the other */
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  }
+  /* Styles for the member detail input fields */
+  .member-input {
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  }
+  .team-lead-button {
+  background-color: #4c68af;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  }

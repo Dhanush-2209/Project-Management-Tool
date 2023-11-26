@@ -1,0 +1,160 @@
+/* signup.component.css */
+
+.transparent-background {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10vh;
+    width: 80vw;
+    max-width: 600px;
+    background: transparent;
+    padding-bottom: 2vh;
+    border-radius: 2vw;
+    align-items: right;
+  }
+  
+  .Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    gap: 1h;
+    width: 30%;
+    margin-top: 4vh;
+  }
+  
+  .text {
+    color: black;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+  
+  .underline {
+    width: 2vw;
+    height: 0.3vh;
+    background-color: black;
+    border-radius: 0.5vw;
+  }
+  
+  .inputs {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  
+  .input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 10vh;
+    background: #eaeaea;
+    border-radius: 1vw;
+  }
+  
+  .input img {
+    margin: 0 3vw;
+  }
+  
+  .input input {
+    height: 4vh;
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 1.0vw;
+  }
+  
+  .Forgot-password {
+    padding-left: 1vw;
+    margin-top: 2vh;
+    color: black;
+    font-size: 1vw;
+  }
+  
+  .Forgot-password span {
+    color: black;
+    cursor: pointer;
+  }
+  
+  .submit-container {
+    display: flex;
+    gap: 3vw;
+    margin: 6vh auto;
+  }
+  
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 6vh;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 2.5vw;
+    font-size: 1.0vw;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .gray {
+    background: #eaeaea;
+    color: #676767;
+  }
+  
+  /* signup.component.css */
+
+.cover {
+  flex: 1;
+  width: 100%;
+  height: 100vh;
+  background: url('../components/Assets/Cover_image.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* Update the existing or add to your CSS file */
+.auth-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+  margin-left: 20%; /* Adjust the left margin as needed */
+}
+
+.auth-wrapper {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Adjust the max-width as needed */
+  width: 100%;
+}
+
+.auth-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Additional styling for login and signup components */
+.container {
+  margin-bottom: 20px;
+}
+
+.Header {
+  width: 100%;
+  text-align: center;
+}
+
+.submit-container {
+  margin-top: 20px;
+}

@@ -1,0 +1,58 @@
+.about-page {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.about-header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.about-header h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.about-main {
+  padding: 20px;
+}
+
+.about-main section {
+  margin-bottom: 20px;
+}
+
+.about-main .company-overview {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.about-main .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-main .team-member {
+  width: 10%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-main img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.about-main .contact-info {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.about-footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
