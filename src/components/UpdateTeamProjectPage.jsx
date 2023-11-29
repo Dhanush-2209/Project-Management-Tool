@@ -38,7 +38,7 @@ const UpdateTeamProjectPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(`https://teambackend-banh.onrender.com/api/teamLead/update/team/${projectDetails.projectName}`, projectDetails);
+      const response = await axios.put(`https://deploy-backend-teamdetails.onrender.com/api/teamLead/update/team/${projectDetails.projectName}`, projectDetails);
       console.log('Team project updated successfully:', response.data);
     } catch (error) {
       console.error('Error updating team project:', error);

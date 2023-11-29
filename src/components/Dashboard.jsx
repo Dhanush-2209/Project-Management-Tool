@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTeamProjectNames = async () => {
       try {
-        const response = await axios.get('https://teambackend-banh.onrender.com/api/teamLead/projects');
+        const response = await axios.get('https://deploy-backend-teamdetails.onrender.com/api/teamLead/projects');
         if (Array.isArray(response.data)) {
           setTeamProjectNames(response.data);
         } else {
@@ -48,7 +48,7 @@ const Dashboard = () => {
   const handleDelete = async (projectName, isTeam) => {
     try {
       const apiUrl = isTeam
-        ? `https://teambackend-banh.onrender.com/api/teamLead/projects/delete/${projectName}`
+        ? `https://deploy-backend-teamdetails.onrender.com/api/teamLead/projects/delete/${projectName}`
         : `https://deploy-backend-indetails.onrender.com/api/individual/delete/individual/${projectName}`;
 
       const response = await axios.delete(apiUrl);

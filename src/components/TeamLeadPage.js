@@ -40,7 +40,7 @@ const TeamLeadPage = () => {
     };
 
     try {
-      const response = await fetch('https://teambackend-banh.onrender.com/api/teamLead/submit', {
+      const response = await fetch('https://deploy-backend-teamdetails.onrender.com/api/teamLead/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
