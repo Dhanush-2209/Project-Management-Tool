@@ -15,18 +15,17 @@ const UpdateIndividualProjectPage = () => {
     const fetchProjectDetails = async () => {
       try {
         const response = await axios.get(`https://deploy-backend-indetails.onrender.com/api/individual/projects/${projectName}`);
-        console.log('Response Data:', response.data); // Add this line
+        console.log('Response Data:', response.data);
         if (response.data && response.data.data) {
           setProjectDetails(response.data.data);
         } else {
           console.error('Unexpected data format for individual project details:', response.data);
-          // Handle the error or set default values as needed
         }
       } catch (error) {
         console.error('Error fetching individual project details:', error);
       }
     };
-  
+
     fetchProjectDetails();
   }, [projectName]);
 

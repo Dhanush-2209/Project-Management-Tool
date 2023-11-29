@@ -40,6 +40,7 @@ function App() {
           <>
             <Sidebar handleLogout={handleLogout} />
             <Routes>
+            <Route path="/sign-in" element={<Navigate replace to="/home" />} />
               <Route path="/team-lead-page" element={<TeamLeadPage />} />
               <Route path="/project" element={<ProjectsPage />} />
               <Route path="/about" element={<AboutPage />} />
